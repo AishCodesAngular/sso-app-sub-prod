@@ -9,7 +9,7 @@ export class SharedService {
   sendMessageToApp1(value: any) {
   window.opener?.postMessage(
     { type: 'GREETING_FROM_APP2', payload: 'Hello back from App2!', process: value },
-    'https://AishCodesAngular.github.io/sso-app-main-prod/'
+    'https://aishcodesangular.github.io/sso-app-main-prod/'
   );
 }
 }

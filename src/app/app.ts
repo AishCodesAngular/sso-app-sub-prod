@@ -29,7 +29,7 @@ export class AppComponent implements OnInit, OnDestroy {
 
   handleMessage = (event: MessageEvent) => {
     const expectedPath = '/sso-app-main-prod/';
-    if (event.origin + expectedPath !== 'https://AishCodesAngular.github.io/sso-app-main-prod/') return; // ✅ security check
+    if (event.origin + expectedPath !== 'https://aishcodesangular.github.io/sso-app-main-prod/') return; // ✅ security check
     if (event.data?.type === 'GREETING_FROM_APP1') {
         this.message.set(event.data);
         console.log('Message received in App2:', event.data);
