@@ -33,7 +33,8 @@ export class AppComponent implements OnInit, OnDestroy {
     if (event.data?.type === 'GREETING_FROM_APP1') {
         this.message.set(event.data);
         console.log('Message received in App2:', event.data);
-        this.conterHandler(event.data.process)
+        this.conterHandler(event.data.process);
+         this.openForms(event.data.process);
     }
   };
 
@@ -51,6 +52,11 @@ conterHandler(value: any) {
     this.counter.set(this.counter() + 1);
   }
 }
+
+openForms(value:any) {
+  this.router.navigate(['/'+value]);
+}
+
 
 incrementApp1(value: any) {
     this.sharedService.sendMessageToApp1(value);
